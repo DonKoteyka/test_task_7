@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}  Menu {% endblock %}
+
+{% load draw_menu %}
+{% block content %}
+
+{% draw_menu 'main_menu' %}
+<br>
+<a href="{% url 'menu:index-detail' 'comment_4' %}">PRESS ME I'M COMMENT 4</a>
+<br>
+<a href="{% url 'menu:index-detail' 'comment_8' %}">AND ME I'M COMMENT 8</a>
+
+{% draw_menu 'secondary_menu' %}
+<br>
+<a href="{% url 'menu:index-detail' 'comment_19' %}">ME, ME I'M COMMENT 19</a>
+{% endblock %}
